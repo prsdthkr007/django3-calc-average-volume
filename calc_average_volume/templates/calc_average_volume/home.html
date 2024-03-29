@@ -1,0 +1,18 @@
+Hello World
+
+ <form id="form1" action="{% url 'volume_breakout' %}" method="POST">
+    {% csrf_token %}
+    <input type="text" id="tradingDate" name="tradingDate" placeholder="tradingDate">
+    <input type="text" id="tradingYear" name="tradingYear" placeholder="tradingYear">
+    <input type="text" id="tradingMonthPrevious" name="tradingMonthPrevious" placeholder="tradingMonthPrevious">
+    <input type="text" id="tradingMonth" name="tradingMonth" placeholder="tradingMonth">
+    <input type="text" id="tradingDay" name="tradingDay" placeholder="tradingDay">
+    <input type="submit" id="save-button" name="save-button" value="Submit" >
+  </form>
+
+
+  <form id="form1" action="{% url 'fetch_volume_breakout' %}" method="POST">
+    {% csrf_token %}
+    <input type="text" id="tradingDate" name="tradingDate" placeholder="tradingDate">
+    <input type="submit" id="fetch-button" name="fetch-button" value="Fetch" >
+  </form>

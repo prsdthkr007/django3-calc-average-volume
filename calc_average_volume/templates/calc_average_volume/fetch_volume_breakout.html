@@ -1,0 +1,18 @@
+Fetch Volume Breakout </br></br>
+<table border="1" cellpadding="5">
+<tr><td>Script Code</td>
+<td>Time Code</td>
+<td>Average Volume</td>
+<td>Last Day Volume</td>
+<td>Percent Change</td></tr>
+
+{% for avd in avds %}
+<tr>
+<td>{{ avd.scriptCode }}</td>
+<td>{{ avd.timeCode }}</td>
+<td>{{ avd.averageVolume }}</td>
+<td>{{ avd.lastDayVolume }}</td>
+<td>{{ avd.percentChange }}</td>
+</tr>
+{% endfor %}
+</table>
